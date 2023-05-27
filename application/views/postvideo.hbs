@@ -1,0 +1,66 @@
+
+  <head>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Post Video</title>
+  </head>
+  <body>
+
+
+
+<main>
+    <h1> Post a Video </h1>
+  <form id="post-image" class="input-form"
+    action="/posts/create" 
+    method="POST"
+    enctype="multipart/form-data">
+    <div class="input-group">
+      <label for="post-title" class="tags post-lbl-title">Post 
+        Title</label>
+      <input 
+      id="post-title"
+      class="text-input post-input-title" 
+      type="text"  
+      placeholder="Post Title"
+      name="title"
+      required
+      />
+      </div>
+
+<div class="input-group">
+      <label for="post-desc" class="tags post-lbl-description">Post 
+        Description</label>
+      <input 
+      id="post-desc"
+      class="text-input post-input-desc" 
+      type="text" 
+      placeholder="Post Description here..."
+      name="description"
+      required
+      />
+      </div>
+
+<label class="tags post-lbl-video">Upload a Video</label>
+      <input
+      id="img-select"
+      class="text-input post-input-video" 
+      type="file"  
+      name="uploadVideo"
+      required
+      />
+      
+      <div class="input-group checkbox-group">
+        <label class="checkbox aop" for"aup">
+          <input type="checkbox" id="aup" required />
+          <a href="#">Acceptable Use Policy</a>
+        </label>
+      </div>
+<div class="button-group">
+                <button id="submit" type="submit" class="btn btn-success">Submit</button>
+                <button id="reset" type="reset" class="btn btn-danger">Reset</button>
+              </div>
+    </form>
+</main>
+  
+
+  </body>
+</html>

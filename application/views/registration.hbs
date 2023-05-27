@@ -1,0 +1,121 @@
+ <head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel='stylesheet' href='public/css/style.css' />
+  </head>
+  
+  <body>
+    <main class="form-container">
+          <h1> Register for an Account </h1>
+      <form id="registration-form" class="input-form" 
+          action="/users/registration" 
+          method="POST" 
+          enctype="application/x-www-form-urlencoded">
+
+          <div class="input-group">
+            <label class="tags" for="username">Username:</label>
+            <input
+              id="username"
+              class="text-input"
+              type="text"
+              placeholder="Username"
+              name="username"
+            />
+            <div id="username-rules" class="validation-text">
+           {{#each reg-error}}
+
+              {{/each}}
+            </div> 
+          </div>
+
+            <div class="input-group"></div>
+              <label class="tags" for="email">Email:</label>
+            <input
+              id="email"
+              class="text-input"
+              type="text"
+              placeholder="Email"
+              name="email"
+            />
+            <div id="email-rules" class="validation-text">
+
+
+
+            </div>
+            <div class="input-group"></div>
+              <label class="tags" for="password">Password:</label>
+            <input
+              id="password"
+              class="text-input"
+              type="text"
+              placeholder="Password"
+              name="password"
+            />
+            <div id="password-rules" class="validation-text">
+
+             
+            </div>
+             <div class="input-group"></div>
+              <label class="tags" for="cpassword">Confirm Password:</label>
+            <input
+              id="cpassword"
+              class="text-input"
+              type="text"
+              placeholder="Confirm Password"
+              name="confirmPassword"
+            />
+            <div id="cpassword-rules" class="validation-text">
+
+
+              
+            </div>
+            <div class="input-group">
+              <label class="checkbox">
+                <input type="checkbox" id="aoc" name="age" value="on"/>
+                I am 13 years of age or older.
+              </label>
+              
+              </div>
+              <div class="input-group">
+              <label class="checkbox">
+                <input type="checkbox" id="tos-pr" name="tos" value="on"  />
+                I accept
+                <a href="#">Terms of Service</a>
+                and
+                <a href="">Privacy Rules.</a>
+                </label>
+              </div>
+
+              <div class="button-group">
+                <button id="submit" type="submit" class="btn btn-success">Submit</button>
+                <button id="reset" type="reset" class="btn btn-danger">Reset</button>
+              </div>
+      </form>
+    </main>
+    <script>
+  // Function to automatically remove flash message alerts after a specified time
+  function removeFlashMessage() {
+    const flashMessage = document.querySelector('.alert');
+
+    if (flashMessage) {
+      // Set the duration (in milliseconds) for the flash message to stay
+      const duration = 3000; // 3 seconds
+
+      // Remove the flash message after the specified duration
+      setTimeout(() => {
+        flashMessage.remove();
+      }, duration);
+    }
+  }
+
+  // Call the function to start the timer
+  removeFlashMessage();
+</script>
+  </body>
+</html>
+
+      <br /><br />
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,469 @@
+/* Global styles */
+body {
+  font-family: "Arial", Times, serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border: none;
+  background-color: #27bbff;
+}
+
+
+
+nav ul {
+  
+  background-color: #3d70b2;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: -10px; /* Add this line to push the navbar down */
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 5;
+}
+
+nav ul li {
+  margin: 0 30px; /* Adjust the margin to create even spacing */
+  margin-left: 10px; /* Add this line to increase the left margin */
+}
+
+nav ul li a {
+  font-style: oblique;
+  border: 2px solid #000;
+  background-color: #002b63;
+  color: #ffff;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+nav ul li a,
+#jump-to-top-button {
+  font-style: oblique;
+  border: 2px solid #000;
+  background-color: #002b63;
+  color: #ffff;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+ 
+}
+
+.nav-button,
+.button-dropdown.nav-items {
+  font-style: oblique;
+  border: 2px solid #000;
+  background-color: #002b63;
+  color: #ffff;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+element {
+  margin-top: -10%;
+  margin-left: -2%;
+}
+
+/* Header styles */
+header {
+  font-style: oblique;
+  background-color: #3d70b2;
+  color: #ffff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h2 {
+  text-decoration: none;
+}
+
+header nav {
+  font-style: oblique;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid white;
+  text-align: center;
+}
+
+header nav a {
+  color: #3a13eb;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+  background-color: #3d70b2;
+  color: #ffff;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.valid-text {
+  outline: solid green;
+}
+
+.invalid-text {
+  outline: solid red;
+}
+
+.product-list {
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+.product-card {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+.api {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.display {
+  font-size: 50px;
+}
+
+/* Form styles */
+form {
+  margin-top: 50px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  width: 20%;
+  padding: 4px 8px;
+  border: 1px solid #185b76;
+  border-radius: 16px;
+  box-shadow: -100px 2px 10px black;
+}
+
+/* Radio button styles */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+#age-yes {
+  border: 2px solid #000;
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.form-button {
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 1rem;
+}
+
+.button {
+  background-color: green;
+}
+
+.reset-button {
+  background-color: red;
+}
+
+input[type="age-no"] {
+  border: 1px solid #ff0000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+input[type="radio"]:checked {
+  border-color: green;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="confirm password"],
+form select,
+form textarea {
+  width: 20%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  width: 20%;
+  box-shadow: -2px 2px 10px black;
+  outline: none; /* Added to remove default outline */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  border-color: #333;
+}
+
+.form-button {
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 1rem;
+  background-color: #3d70b2; /* Green color for submit button */
+  cursor: pointer;
+}
+.submit-button {
+  background-color: green;	 
+}
+.reset-button {
+  background-color: red; /* Red color for reset button */
+}
+
+.btn {
+  font-style: oblique;
+  border: 2px solid #000;
+  background-color: #002b63;
+  color: #ffff;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn-success {
+  background-color: green;
+  color: white;
+}
+
+.btn-danger {
+  background-color: red;
+  color: white;
+}
+
+input[type="radio"]:checked {
+  border-color: green;
+}
+
+#flash-message .alert {
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#flash-message .alert.alert-danger {
+  background-color: #f44336;
+}
+
+#flash-message .alert.alert-success {
+  background-color: #4CAF50;
+}
+
+.dropdown-menu-nobs {
+  position: relative;
+  display: inline-block;
+  margin-left: auto; /* Add this line to push the dropdown to the right */
+}
+
+.dropdown-menu-nobs .dropdown-menu-items {
+  position: absolute;
+  top: 100%;
+  right: 0; /* Adjusted from 'left' to 'right' */
+  display: none;
+  background-color: #3d70b2;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid black; /* Added black border */
+}
+
+.dropdown-menu-nobs:hover .dropdown-menu-items {
+  display: block;
+}
+
+.dropdown-menu-items .nav-items {
+  display: block;
+}
+
+.dropdown-menu-items button.logout-button {
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.search-bar .search-text {
+  width: 300px; /* Adjust the width as desired */
+  padding: 10px; /* Adjust the padding as desired */
+  font-size: 16px; /* Adjust the font size as desired */
+}
+
+.search-bar .search-button {
+  font-style: oblique;
+  border: 2px solid #000;
+  
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70px; /* Adjust the width as desired */
+  height: 50px; /* Adjust the height as desired */
+  font-size: 20px; /* Adjust the font size as desired */
+  background-color: green;
+}
+
+.product-card {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  background-color: #002b63;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 250px; /* Adjust the width as desired */
+}
+
+.product-card .thumbnail {
+  width: 200px; /* Adjust the width as desired */
+  height: 200px; /* Adjust the height as desired */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card .product-info {
+  margin-top: 10px;
+}
+
+.product-card .product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-card .product-date {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.card + .card {
+  margin-left: 20px; /* Add margin between cards */
+}
+
+.delete-button {
+  margin-top: 10px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-title-separator {
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.comment-section {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.comment-box-text {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  resize: vertical;
+}
+
+.comment-date {
+  font-style: italic;
+}
+
+.post-title {
+  font-size: 70px; /* Adjust the font size as desired */
+}
+
+.comment {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.comment:last-child {
+  border-bottom: none; /* Remove the bottom border for the last comment */
+}
+
+.comment-author {
+  color: green; /* Set the username color to green */
+
+}
+
+#jump-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-style: oblique;
+  border: 2px solid #000;
+  background-color: #002b63;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

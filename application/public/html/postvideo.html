@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Post Video</title>
+  </head>
+  <body>
+    <header>
+      <h1>Post Video</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="postvideo.html">Upload</a></li>
+        <li><a href="viewpost.html">Comment</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+    <h1>Post Video</h1>
+    <form action="submit_video.php" method="post">
+      <label for="post-title">Title:</label>
+      <input type="text" id="post-title" name="post-title" placeholder="Insert Title"required>
+      <br>
+      <label for="post-description">Description:</label>
+      <textarea id="post-description" name="post-description" placeholder="Input Description" required></textarea>
+      <br>
+      <label for="post-video">Video:</label>
+      <input type="file" id="post-video" name="post-video" accept="video/*" required>
+      <br>
+      <label for="accept-policy">Acceptable Use Policy:</label>
+      <input type="checkbox" id="accept-policy" name="accept-policy" required>
+      <label for="accept-policy">I accept the Acceptable Use Policy.</label>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+    <footer>
+      <p>&copy; Ken Chika 2023</p>
+    </footer>
+  </body>
+</html>

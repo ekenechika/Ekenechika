@@ -1,0 +1,95 @@
+<head>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <title>View Post</title>
+</head>
+
+<body>
+  <main>
+
+    <div class="post-container">
+      {{log this}}
+      <h1>View Post</h1>
+      <video class="video-container" width="1500" height="500" controls>
+        <source src="/{{currentPost.video}}" type="video/mp4" />
+      </video>
+       <div class="post-info">
+        <h2 class="post-title">{{currentPost.title}}</h2>
+        <div class="post-author-date">
+          <p class="author"><strong>User:</strong> {{currentPost.username}}</p>
+         <hr>
+          <p class="date-posted"><strong>Date Uploaded:</strong> {{formatDateString currentPost.createdAt}}</p>
+          <hr>
+        </div>
+        <p class="post-description"><strong>Description:</strong> {{currentPost.description}}</p>
+      </div>
+      <div class="comment-section"><strong>Comment Section</strong>
+        <div class="comment-box">
+          <textarea id="comment-text" class="comment-box-text"></textarea>
+          <button id="comment-button" class="btn btn-success" data-postid="{{currentPost.id}}">Submit</button>
+        </div>
+        <div class="comments">
+          {{#each currentPost.comments}}
+            <div class="comment">
+              <strong class="comment-author">{{this.username}}</strong>
+              <span class="comment-date">{{formatDateString this.createdAt}}</span>
+              <div class="comment-text">{{this.text}}</div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('comment-button').addEventListener('click', function (ev) {
+        let commentText = document.getElementById("comment-text").value;
+        if (!commentText) return;
+        var postId = ev.currentTarget.dataset.postid;
+
+        fetch("/comments/create", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(
+            {
+            postId: postId,
+            comment: commentText
+          }
+        )
+      })
+        .then(response => response.json())
+    .then(data => {
+      console.log(data);
+
+      // Append the new comment to the comment section
+      const commentsSection = document.querySelector('.comments');
+      const newComment = document.createElement('div');
+      newComment.classList.add('comment');
+      newComment.innerHTML = `
+        <strong class="comment-author">${data.username}</strong>
+        <span class="comment-date">${data.createdAt}</span>
+        <div class="comment-text">${data.commentText}</div>
+      `;
+      commentsSection.appendChild(newComment);
+
+      // Clear the comment text area
+      document.getElementById("comment-text").value = "";
+    });
+});
+    </script>
+  </main>
+   
+</body>
+   <a id="jump-to-top-button" href="#">Back to the Top</a>
+
+<script>
+  document.getElementById("jump-to-top-button").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+   
+   
+   
+   
+ 

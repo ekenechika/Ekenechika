@@ -1,0 +1,69 @@
+
+  <head>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>My Profile</title>
+    <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .card {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .delete-button {
+      margin-top: 10px;
+    }
+
+  </style>
+  </head>
+
+<body>
+  <main>
+    <h1>My Profile</h1>
+    <h2>Account information displayed below</h2>
+    <img width="175" height="175" src="https://t3.ftcdn.net/jpg/00/74/18/34/360_F_74183460_qqNZDSDjY3RvS2VEfqMWRXGWMjgQirXO.jpg">
+    <div>
+      <p><strong>Username:</strong></p>
+      <p class="profile-username">{{user.username}}</p>
+      <p><strong>Email:</strong></p>
+      <p class="profile-email">{{user.email}}</p>
+    </div>
+    <h2>User Posts</h2>
+    <div class="card-container">
+      {{#each posts}}
+      {{>card this}}
+      {{/each}}
+    </div>
+    </div>
+  </main>
+  <script>
+   // Function to automatically remove flash message alerts after a specified time
+   function removeFlashMessage() {
+     const flashMessage = document.querySelector('.alert');
+
+
+     if (flashMessage) {
+       // Set the duration (in milliseconds) for the flash message to stay
+       const duration = 3000; // 3 seconds
+
+
+       // Remove the flash message after the specified duration
+       setTimeout(() => {
+         flashMessage.remove();
+       }, duration);
+     }
+   }
+
+
+   // Call the function to start the timer
+   removeFlashMessage();
+ </script>
+</body>
+</html>
+
+
+  

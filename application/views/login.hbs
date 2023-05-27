@@ -1,0 +1,73 @@
+
+  <head>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Login</title>
+  </head>
+  <body>
+
+
+
+    <main>
+      <h1> Login to Your Account </h1>
+       <form id="login-form" class="input-form" 
+          action="/users/login" 
+          method="POST" 
+          enctype="application/x-www-form-urlencoded">
+
+          <div class="input-group">
+            <label class="tags" for="username">Username:</label>
+            <input
+              id="username"
+              class="text-input"
+              type="text"
+              placeholder="Username"
+              name="username"
+            />
+            <div id="username-rules" class="validation-text">
+              
+
+            </div> 
+          </div>
+
+            <div class="input-group"></div>
+              <label class="tags" for="email">Password:</label>
+            <input
+              id="password"
+              class="text-input"
+              type="text"
+              placeholder="Password"
+              name="password"
+            />
+            <div id="Password-rules" class="validation-text">
+              <div class="button-group">
+                <button id="login" type="submit" class="btn btn-success">Login</button>
+  
+      </form>
+    </main>
+ <script>
+   // Function to automatically remove flash message alerts after a specified time
+   function removeFlashMessage() {
+     const flashMessage = document.querySelector('.alert');
+
+
+     if (flashMessage) {
+       // Set the duration (in milliseconds) for the flash message to stay
+       const duration = 3000; // 3 seconds
+
+
+       // Remove the flash message after the specified duration
+       setTimeout(() => {
+         flashMessage.remove();
+       }, duration);
+     }
+   }
+
+
+   // Call the function to start the timer
+   removeFlashMessage();
+ </script>
+  
+
+  </body>
+</html>
+
